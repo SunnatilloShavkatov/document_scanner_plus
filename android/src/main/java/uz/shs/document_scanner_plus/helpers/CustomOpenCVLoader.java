@@ -1,4 +1,4 @@
-package com.example.document_scanner.helpers;
+package uz.shs.document_scanner_plus.helpers;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -6,21 +6,18 @@ import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
 import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.document_scanner.R;
+import uz.shs.document_scanner_plus.R;
 
 import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;

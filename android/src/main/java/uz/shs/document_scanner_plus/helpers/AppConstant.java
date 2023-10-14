@@ -1,4 +1,4 @@
-package com.example.document_scanner.helpers;
+package uz.shs.document_scanner_plus.helpers;
 
 import java.util.Arrays;
 import java.util.List;

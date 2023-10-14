@@ -1,11 +1,11 @@
-package com.example.document_scanner.views;
+package uz.shs.document_scanner_plus.views;
 
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 
-import com.example.document_scanner.R;
+import uz.shs.document_scanner_plus.R;
 
 /**
  * Created by andre on 09/01/2018.

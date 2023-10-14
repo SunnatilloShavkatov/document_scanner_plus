@@ -1,4 +1,4 @@
-package com.example.document_scanner.views;
+package uz.shs.document_scanner_plus.views;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,21 +7,16 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.hardware.Camera.Size;
-import android.hardware.display.DisplayManager;
 import android.media.AudioManager;
-import android.media.ExifInterface;
 import android.media.MediaActionSound;
 import android.net.Uri;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
 import android.preference.PreferenceManager;
-import android.provider.MediaStore;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Display;
@@ -32,7 +27,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.AnimationSet;
@@ -42,13 +36,13 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.example.document_scanner.BuildConfig;
-import com.example.document_scanner.ImageProcessor;
-import com.example.document_scanner.R;
-import com.example.document_scanner.helpers.CustomOpenCVLoader;
-import com.example.document_scanner.helpers.OpenNoteMessage;
-import com.example.document_scanner.helpers.PreviewFrame;
-import com.example.document_scanner.helpers.ScannedDocument;
+import uz.shs.document_scanner_plus.BuildConfig;
+import uz.shs.document_scanner_plus.ImageProcessor;
+import uz.shs.document_scanner_plus.R;
+import uz.shs.document_scanner_plus.helpers.CustomOpenCVLoader;
+import uz.shs.document_scanner_plus.helpers.OpenNoteMessage;
+import uz.shs.document_scanner_plus.helpers.PreviewFrame;
+import uz.shs.document_scanner_plus.helpers.ScannedDocument;
 //import com.facebook.react.bridge.Promise;
 //import com.facebook.react.bridge.WritableMap;
 //import com.facebook.react.bridge.WritableNativeMap;
@@ -67,30 +61,19 @@ import org.opencv.imgproc.Imgproc;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import java.util.logging.Logger;
 
-import java.io.File;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import java.io.ByteArrayOutputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import android.util.Base64;
-
-import static com.example.document_scanner.helpers.Utils.addImageToGallery;
-import static com.example.document_scanner.helpers.Utils.decodeSampledBitmapFromUri;
+import static uz.shs.document_scanner_plus.helpers.Utils.decodeSampledBitmapFromUri;
 
 public class OpenNoteCameraView extends JavaCameraView implements PictureCallback {
 

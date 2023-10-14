@@ -1,4 +1,4 @@
-package com.example.document_scanner.helpers;
+package uz.shs.document_scanner_plus.helpers;
 
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.Point;

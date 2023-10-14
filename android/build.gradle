@@ -1,14 +1,14 @@
-group 'com.example.document_scanner'
+group 'uz.shs.document_scanner_plus'
 version '1.0'
 
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:7.3.1'
 
     }
 }
@@ -16,7 +16,7 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
 }
@@ -24,10 +24,10 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 21
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -40,7 +40,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.zxing:core:3.0.1'
+    implementation 'com.google.zxing:core:3.5.2'
     implementation 'com.github.eliasteeny:opencv_android_module:3.1.0-fix3'
     implementation project(path: ':flutter_plugin_android_lifecycle')
 

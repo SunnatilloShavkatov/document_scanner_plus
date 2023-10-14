@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:io' show Platform;
 
-import 'package:document_scanner/scannedImage.dart';
+import 'package:document_scanner_plus/scannedImage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-export 'package:document_scanner/scannedImage.dart';
+export 'package:document_scanner_plus/scannedImage.dart';
 
 const String _methodChannelIdentifier = 'document_scanner';
 

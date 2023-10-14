@@ -1,10 +1,8 @@
-package com.example.document_scanner;
+package uz.shs.document_scanner_plus;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.drawable.shapes.PathShape;
@@ -14,7 +12,7 @@ import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.example.document_scanner.views.OpenNoteCameraView;
+import uz.shs.document_scanner_plus.views.OpenNoteCameraView;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
 import com.google.zxing.FormatException;
@@ -26,34 +24,29 @@ import com.google.zxing.Result;
 import com.google.zxing.ResultPoint;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.multi.qrcode.QRCodeMultiReader;
-import com.example.document_scanner.helpers.OpenNoteMessage;
-import com.example.document_scanner.helpers.PreviewFrame;
-import com.example.document_scanner.helpers.Quadrilateral;
-import com.example.document_scanner.helpers.ScannedDocument;
-import com.example.document_scanner.helpers.Utils;
-import com.example.document_scanner.views.HUDCanvasView;
+import uz.shs.document_scanner_plus.helpers.OpenNoteMessage;
+import uz.shs.document_scanner_plus.helpers.PreviewFrame;
+import uz.shs.document_scanner_plus.helpers.Quadrilateral;
+import uz.shs.document_scanner_plus.helpers.ScannedDocument;
+import uz.shs.document_scanner_plus.helpers.Utils;
+import uz.shs.document_scanner_plus.views.HUDCanvasView;
 
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
-import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;
-import org.opencv.core.Rect;
-import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-import org.opencv.calib3d.Calib3d;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by allgood on 05/03/16.

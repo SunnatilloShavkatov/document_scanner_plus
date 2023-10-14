@@ -1,4 +1,4 @@
-package com.example.document_scanner;
+package uz.shs.document_scanner_plus;
 
 import android.app.Activity;
 import android.app.Application;
@@ -10,7 +10,6 @@ import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
 
-import io.flutter.app.FlutterActivity;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;

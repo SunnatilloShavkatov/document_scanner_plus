@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.example.document_scanner">
-    <uses-permission
-        android:name="android.permission.CAMERA"
-         />
+    package="uz.shs.document_scanner_plus">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
 </manifest>

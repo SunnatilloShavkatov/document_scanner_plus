@@ -1,4 +1,4 @@
-package com.example.document_scanner.views;
+package uz.shs.document_scanner_plus.views;
 
 import android.content.Context;
 import android.graphics.Canvas;

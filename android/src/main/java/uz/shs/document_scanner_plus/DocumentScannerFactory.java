@@ -1,4 +1,4 @@
-package com.example.document_scanner;
+package uz.shs.document_scanner_plus;
 
 import android.app.Activity;
 import android.app.Application;
