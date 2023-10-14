@@ -1,15 +1,16 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
-
 import 'package:document_scanner_plus/document_scanner.dart';
+import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -23,18 +24,16 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+  Widget build(BuildContext context) => MaterialApp(
+        home: Scaffold(
           appBar: AppBar(
             title: const Text('Plugin example app'),
           ),
           body: FutureBuilder<PermissionStatus>(
             future: cameraPermissionFuture,
-            builder: (BuildContext context,
-                AsyncSnapshot<PermissionStatus> snapshot) {
+            builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                if (snapshot.data!.isGranted)
+                if (snapshot.data!.isGranted) {
                   return Stack(
                     children: <Widget>[
                       Column(
@@ -45,13 +44,7 @@ class _MyAppState extends State<MyApp> {
                                     image: FileImage(scannedDocument!),
                                   )
                                 : DocumentScanner(
-                                    // documentAnimation: false,
-                                    noGrayScale: true,
-                                    onDocumentScanned:
-                                        (ScannedImage scannedImage) {
-                                      print("document : " +
-                                          scannedImage.croppedImage!);
-
+                                    onDocumentScanned: (scannedImage) {
                                       setState(() {
                                         scannedDocument = scannedImage
                                             .getScannedDocumentAsFile();
@@ -68,7 +61,7 @@ class _MyAppState extends State<MyApp> {
                               left: 0,
                               right: 0,
                               child: TextButton(
-                                child: Text("retry"),
+                                child: const Text('retry'),
                                 onPressed: () {
                                   setState(() {
                                     scannedDocument = null;
@@ -76,20 +69,21 @@ class _MyAppState extends State<MyApp> {
                                 },
                               ),
                             )
-                          : SizedBox(),
+                          : const SizedBox(),
                     ],
                   );
-                else
-                  return Center(
-                    child: Text("camera permission denied"),
+                } else {
+                  return const Center(
+                    child: Text('camera permission denied'),
                   );
+                }
               } else {
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(),
                 );
               }
             },
-          )),
-    );
-  }
+          ),
+        ),
+      );
 }

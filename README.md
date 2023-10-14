@@ -1,4 +1,4 @@
-# document_scanner
+# document_scanner_plus
 
 A platform view plugin for Flutter apps that adds document scanning functionality on Android/IOS.
 
@@ -35,7 +35,7 @@ first add as a dependency in pubspec.yaml
 import:
 
 ```
-import 'package:document_scanner/document_scanner.dart';
+import 'package:document_scanner_plus/document_scanner.dart';
 ```
 
 then use it as a widget:
@@ -61,7 +61,7 @@ Reference to the React Native package : https://github.com/Michaelvilleneuve/rea
 
 ### Step 1
 
-- Fork this project's repo : https://github.com/eliasteeny/flutter_document_scanner
+- Fork this project's repo : https://github.com/SunnatilloShavkatov/flutter_document_scanner.git
 
 ### Step 2
 
