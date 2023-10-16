@@ -19,8 +19,8 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    cameraPermissionFuture = Permission.camera.request();
     super.initState();
+    cameraPermissionFuture = Permission.camera.request();
   }
 
   @override
