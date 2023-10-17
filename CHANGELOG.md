@@ -1,3 +1,7 @@
+## 1.0.2
+
+* bug fix for android
+
 ## 1.0.1
 
 * updated readme
