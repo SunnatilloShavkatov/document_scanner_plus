@@ -24,7 +24,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    namespace = 'uz.shs.document_scanner_plus'
+    namespace 'uz.shs.document_scanner_plus'
     compileSdkVersion 33
 
     defaultConfig {
